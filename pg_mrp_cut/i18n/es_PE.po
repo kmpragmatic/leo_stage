@@ -1,0 +1,510 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pg_mrp_cut
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-14 04:27+0000\n"
+"PO-Revision-Date: 2022-06-14 04:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,help:pg_mrp_cut.field_stock_location__usage
+msgid ""
+"* Vendor Location: Virtual location representing the source location for products coming from your vendors\n"
+"* View: Virtual location used to create a hierarchical structures for your warehouse, aggregating its child locations ; can't directly contain products\n"
+"* Internal Location: Physical locations inside your own warehouses,\n"
+"* Customer Location: Virtual location representing the destination location for products sent to your customers\n"
+"* Inventory Loss: Virtual location serving as counterpart for inventory operations used to correct stock levels (Physical inventories)\n"
+"* Production: Virtual counterpart location for production operations: this location consumes the components and produces finished products\n"
+"* Transit Location: Counterpart location that should be used in inter-company or inter-warehouses operations"
+msgstr ""
+"* Ubicación del proveedor: ubicación virtual que representa la ubicación de origen de los productos que provienen de sus proveedores\n"
+"* Vista: ubicación virtual utilizada para crear estructuras jerárquicas para su almacén, agregando sus ubicaciones secundarias; no puede contener productos directamente\n"
+"* Ubicación interna: ubicaciones físicas dentro de sus propios almacenes,\n"
+"* Ubicación del cliente: ubicación virtual que representa la ubicación de destino de los productos enviados a sus clientes\n"
+"* Pérdida de inventario: ubicación virtual que sirve como contraparte para las operaciones de inventario utilizadas para corregir los niveles de existencias (inventarios físicos)\n"
+"* Producción: ubicación de contraparte virtual para operaciones de producción: esta ubicación consume los componentes y produce productos terminados\n"
+"* Ubicación de tránsito: ubicación de contraparte que debe usarse en operaciones entre empresas o entre almacenes"
+
+#. module: pg_mrp_cut
+#: model_terms:ir.ui.view,arch_db:pg_mrp_cut.mrp_cut_form_view
+msgid "<span>Available</span>"
+msgstr "<span>Disponible</span>"
+
+#. module: pg_mrp_cut
+#: code:addons/pg_mrp_cut/models/mrp_bom.py:0
+#, python-format
+msgid ""
+"A product with type of product finished is 'Product' and Static Cost is not "
+"Check, only can exist inside material list one product with this "
+"characteristics."
+msgstr ""
+"Un producto configurado como producto terminado 'Producto' y sin costo estático, "
+"solo puede haber 1 en la lista de materiales "
+"de tipo limpieza."
+
+#. module: pg_mrp_cut
+#: model:res.groups,name:pg_mrp_cut.group_mrp_cutting_manager
+msgid "Administrator"
+msgstr "Administrador"
+
+#. module: pg_mrp_cut
+#: model:ir.model,name:pg_mrp_cut.model_mrp_bom
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut__bom_id
+msgid "Bill of Material"
+msgstr "Lista de materiales"
+
+#. module: pg_mrp_cut
+#: model:ir.model,name:pg_mrp_cut.model_mrp_bom_line
+msgid "Bill of Material Line"
+msgstr "Línea de Lista de Materiales"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,help:pg_mrp_cut.field_mrp_cut__bom_id
+msgid ""
+"Bill of Materials allow you to define the list of required components to "
+"make a finished product."
+msgstr ""
+"Lista de materiales que permite definir la lista de componentes requeridos"
+"para crear productos finalizados."
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_bom__type
+msgid "BoM Type"
+msgstr "Tipo de LdM"
+
+#. module: pg_mrp_cut
+#: model_terms:ir.ui.view,arch_db:pg_mrp_cut.mrp_cut_form_view
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields.selection,name:pg_mrp_cut.selection__mrp_cut__state__cancel
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields.selection,name:pg_mrp_cut.selection__mrp_cut__state__to_close
+msgid "Closed"
+msgstr "Cerrado"
+
+#. module: pg_mrp_cut
+#: model:ir.model,name:pg_mrp_cut.model_res_company
+msgid "Companies"
+msgstr "Compañias"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut__company_id
+msgid "Company"
+msgstr "Compañia"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut_line__company_id
+msgid "Compañia"
+msgstr ""
+
+#. module: pg_mrp_cut
+#: model_terms:ir.ui.view,arch_db:pg_mrp_cut.mrp_cut_form_view
+msgid "Components"
+msgstr "Componentes"
+
+#. module: pg_mrp_cut
+#: model_terms:ir.ui.view,arch_db:pg_mrp_cut.mrp_cut_form_view
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields.selection,name:pg_mrp_cut.selection__mrp_cut__state__confirmed
+msgid "Confirmed"
+msgstr "Confirmado"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut__product_cost
+msgid "Cost"
+msgstr "Costo"
+
+#. module: pg_mrp_cut
+#: code:addons/pg_mrp_cut/models/mrp_cut.py:0
+#, python-format
+msgid "Cost in lines is not equal to the total cost from cutting product"
+msgstr "El Costo Total en las lineas no son iguales al costo total del producto de limpieza."
+
+#. module: pg_mrp_cut
+#: model_terms:ir.actions.act_window,help:pg_mrp_cut.mrp_cut_view
+msgid "Create a cutting order to be processed later"
+msgstr "Crear una orden de limpieza para procesarla más adelante."
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut__create_uid
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut_line__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut__create_date
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut_line__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut_line__cut_id
+msgid "Cut"
+msgstr "Limpieza"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields.selection,name:pg_mrp_cut.selection__mrp_bom__type__cutting
+#: model:ir.model.fields.selection,name:pg_mrp_cut.selection__stock_location__usage__cutting
+#: model:ir.model.fields.selection,name:pg_mrp_cut.selection__stock_picking_type__code__mrp_cutting
+#: model:ir.module.category,name:pg_mrp_cut.module_category_manufacturing_cutting
+msgid "Cutting"
+msgstr "Limpieza"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_stock_move__mrp_cut_id
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_stock_move_line__mrp_cut_id
+msgid "Cutting Id"
+msgstr "Limpieza Id"
+
+#. module: pg_mrp_cut
+#: model:ir.model,name:pg_mrp_cut.model_mrp_cut_line
+msgid "Cutting Line"
+msgstr "Linea de Limpieza"
+
+#. module: pg_mrp_cut
+#: model_terms:ir.ui.view,arch_db:pg_mrp_cut.view_mrp_cutting_search
+msgid "Cutting Options"
+msgstr "Opciones de la Limpieza"
+
+#. module: pg_mrp_cut
+#: model:ir.model,name:pg_mrp_cut.model_mrp_cut
+msgid "Cutting Order"
+msgstr "Ordén de Limpieza"
+
+#. module: pg_mrp_cut
+#: model:ir.actions.act_window,name:pg_mrp_cut.mrp_cut_view
+#: model:ir.ui.menu,name:pg_mrp_cut.menu_mrp_cut
+#: model_terms:ir.ui.view,arch_db:pg_mrp_cut.mrp_cut_form_view
+msgid "Cutting Orders"
+msgstr "Órdenes de Limpieza"
+
+#. module: pg_mrp_cut
+#: model_terms:ir.ui.view,arch_db:pg_mrp_cut.product_template_form_inherit_cutting_field
+msgid "Cutting Process"
+msgstr "Proceso de Limpieza"
+
+#. module: pg_mrp_cut
+#: model_terms:ir.ui.view,arch_db:pg_mrp_cut.mrp_cut_form_view
+msgid "Cutting Reference"
+msgstr "Referencia de Limpieza"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,help:pg_mrp_cut.field_mrp_cut__date_planned_start
+msgid "Date at which you plan to start the operation."
+msgstr "Fecha en la cual planeas iniciar la operación."
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_bom__display_name
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_bom_line__display_name
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut__display_name
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut_line__display_name
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_product_template__display_name
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_res_company__display_name
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_stock_location__display_name
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_stock_move__display_name
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_stock_move_line__display_name
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_stock_picking_type__display_name
+msgid "Display Name"
+msgstr "Nombre a Mostrar"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields.selection,name:pg_mrp_cut.selection__mrp_cut__state__done
+msgid "Done"
+msgstr "Realizado"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields.selection,name:pg_mrp_cut.selection__mrp_cut__state__draft
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: pg_mrp_cut
+#: model:ir.module.category,description:pg_mrp_cut.module_category_manufacturing_cutting
+msgid ""
+"Helps you manage your cutting processes and generate reports on those\n"
+"                processes.\n"
+"            "
+msgstr  ""
+"Ayuda a administrar su procesos de limpieza y generar reportes en estos\n"
+"                procesos.\n"
+"            "
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_bom__id
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_bom_line__id
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut__id
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut_line__id
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_product_template__id
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_res_company__id
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_stock_location__id
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_stock_move__id
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_stock_move_line__id
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_stock_picking_type__id
+msgid "ID"
+msgstr ""
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields.selection,name:pg_mrp_cut.selection__mrp_cut__state__progress
+msgid "In Progress"
+msgstr "En Progreso"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,help:pg_mrp_cut.field_mrp_cut__product_cost
+msgid ""
+"In Standard Price & AVCO: value of the product (automatically computed in AVCO).\n"
+"        In FIFO: value of the next unit that will leave the stock (automatically computed).\n"
+"        Used to value the product when the purchase cost is not known (e.g. inventory adjustment).\n"
+"        Used to compute margins on sale orders."
+msgstr ""
+
+#. module: pg_mrp_cut
+#: model_terms:ir.ui.view,arch_db:pg_mrp_cut.mrp_cut_form_view
+msgid "Information Extra"
+msgstr "Información Extra"
+
+#. module: pg_mrp_cut
+#: model:ir.model,name:pg_mrp_cut.model_stock_location
+msgid "Inventory Locations"
+msgstr "Ubicaciones de inventario"
+
+#. module: pg_mrp_cut
+#: model:ir.actions.act_window,name:pg_mrp_cut.action_mrp_cutting_moves
+msgid "Inventory Moves"
+msgstr "Movimientos de inventario"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_bom____last_update
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_bom_line____last_update
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut____last_update
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut_line____last_update
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_product_template____last_update
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_res_company____last_update
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_stock_location____last_update
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_stock_move____last_update
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_stock_move_line____last_update
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_stock_picking_type____last_update
+msgid "Last Modified on"
+msgstr "Ultima Modificación en"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut__write_uid
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut_line__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut__write_date
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut_line__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización en"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_stock_location__usage
+msgid "Location Type"
+msgstr "Tipo de ubicación"
+
+#. module: pg_mrp_cut
+#: model_terms:ir.ui.view,arch_db:pg_mrp_cut.mrp_cut_form_view
+msgid "Mark as Done"
+msgstr "Marcas como Hecho"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields.selection,name:pg_mrp_cut.selection__mrp_bom_line__type_product_finished__merma
+#: model:ir.model.fields.selection,name:pg_mrp_cut.selection__product_template__type_product_finished__merma
+msgid "Merma"
+msgstr ""
+
+#. module: pg_mrp_cut
+#: code:addons/pg_mrp_cut/models/mrp_cut.py:0
+#: code:addons/pg_mrp_cut/models/mrp_cut.py:0
+#, python-format
+msgid "New"
+msgstr "Nuevo"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut__picking_type_id
+msgid "Operation Type"
+msgstr "Tipo de Operación"
+
+#. module: pg_mrp_cut
+#: model:ir.model,name:pg_mrp_cut.model_stock_picking_type
+msgid "Picking Type"
+msgstr "Tipo de Picking"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut_line__product_price
+msgid "Price Unit"
+msgstr "Costo Unitario"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut__product_id
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut_line__product_id
+#: model:ir.model.fields.selection,name:pg_mrp_cut.selection__mrp_bom_line__type_product_finished__product
+#: model:ir.model.fields.selection,name:pg_mrp_cut.selection__product_template__type_product_finished__product
+msgid "Product"
+msgstr "Producto"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut__product_cost_total
+msgid "Product Cost total"
+msgstr "Costo Total"
+
+#. module: pg_mrp_cut
+#: model_terms:ir.ui.view,arch_db:pg_mrp_cut.mrp_cut_form_view
+msgid "Product Moves"
+msgstr "Movimientos de Productos"
+
+#. module: pg_mrp_cut
+#: model:ir.model,name:pg_mrp_cut.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Movimientos de Producto (Stock Move Line)"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut_line__product_percent
+msgid "Product Percent"
+msgstr "Porcentaje"
+
+#. module: pg_mrp_cut
+#: model:ir.model,name:pg_mrp_cut.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de Producto"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut_line__product_total
+msgid "Product Total"
+msgstr "SubTotal"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut__product_uom_id
+msgid "Product Unit of Measure"
+msgstr "Unidad de medida del producto"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut__product_src_stock_qty
+msgid "Qty Available in Stock"
+msgstr "Cantidad Disponible en Stock"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut_line__product_qty
+msgid "Qty Finished"
+msgstr "Cantidad Finalizada"
+
+#. module: pg_mrp_cut
+#: code:addons/pg_mrp_cut/models/mrp_cut.py:0
+#, python-format
+msgid "Qty in order is not same that was consumed"
+msgstr "La cantidad en la orden no es igual que la cantidad consumida."
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut__product_qty
+msgid "Quantity to process"
+msgstr "Cantidad a procesar"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut__name
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields.selection,name:pg_mrp_cut.selection__mrp_bom_line__type_product_finished__residual
+#: model:ir.model.fields.selection,name:pg_mrp_cut.selection__product_template__type_product_finished__residual
+msgid "Residual"
+msgstr "Residuo"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut__move_raw_ids
+#: model_terms:ir.ui.view,arch_db:pg_mrp_cut.mrp_cut_form_view
+msgid "Results"
+msgstr "Resultados"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut__date_planned_start
+msgid "Scheduled Date"
+msgstr "Fecha programada"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut__location_dest_id
+msgid "Source Location"
+msgstr "Ubicación Destino"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut__location_src_id
+msgid "Source Location"
+msgstr "Ubicación Origen"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut__state
+msgid "State"
+msgstr "Estado"
+
+#. module: pg_mrp_cut
+#: model:ir.model,name:pg_mrp_cut.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento de Stock"
+
+#. module: pg_mrp_cut
+#: code:addons/pg_mrp_cut/models/mrp_cut.py:0
+#, python-format
+msgid ""
+"Stock available for cutting product is %s and stock that you want process is"
+" %s, no stock enough."
+msgstr ""
+"Stock disponible para el producto a limpiar es %s y el stock que deseas procesar es"
+" %s, stock insuficiente."
+
+#. module: pg_mrp_cut
+#: model_terms:ir.actions.act_window,help:pg_mrp_cut.mrp_cut_view
+msgid "This will generate new products from a bill of material of type cut."
+msgstr "Este generará nuevos productos de una lista de materiales de tipo limpieza."
+
+#. module: pg_mrp_cut
+#: model_terms:ir.ui.view,arch_db:pg_mrp_cut.mrp_cut_form_view
+msgid "Total"
+msgstr ""
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_stock_picking_type__code
+msgid "Type of Operation"
+msgstr "Tipo de operación"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_bom_line__type_product_finished
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut_line__type_product_finished
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_product_product__type_product_finished
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_product_template__type_product_finished
+msgid "Type of Product Finished"
+msgstr "Tipo de producto finalizado"
+
+#. module: pg_mrp_cut
+#: model:res.groups,name:pg_mrp_cut.group_mrp_cutting_user
+msgid "User"
+msgstr "Usuario"
+
+#. module: pg_mrp_cut
+#: model_terms:ir.ui.view,arch_db:pg_mrp_cut.mrp_cut_form_view
+msgid "Valuation"
+msgstr "Valorización"
+
+#. module: pg_mrp_cut
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_bom_line__check_cost_static
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_mrp_cut_line__check_cost_static
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_product_product__check_cost_static
+#: model:ir.model.fields,field_description:pg_mrp_cut.field_product_template__check_cost_static
+msgid "¿Static Cost in Cutting?"
+msgstr "¿Costo Estático?"

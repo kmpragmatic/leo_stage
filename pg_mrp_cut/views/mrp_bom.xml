@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="mrp_bom_form_view_inherit_cutting_field" model="ir.ui.view">
+            <field name="name">mrp.bom.form.view.inherit.cutting.field</field>
+            <field name="model">mrp.bom</field>
+            <field name="inherit_id" ref="mrp.mrp_bom_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/notebook/page/field[@name='bom_line_ids']/tree/field[@name='product_qty']"
+                       position="after">
+                    <field name="type_product_finished" force_save="1"
+                           attrs="{'column_invisible': [('parent.type','not in', ('cutting'))],'required': [('parent.type','in', ('cutting'))]}" readonly="1"/>
+                    <field name="check_cost_static"
+                           attrs="{'column_invisible': [('parent.type','not in', ('cutting'))],'required': [('parent.type','in', ('cutting'))]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
